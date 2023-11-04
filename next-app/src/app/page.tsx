@@ -1,9 +1,14 @@
-import Image from "next/image";
+import { LinkBtn } from "../components/LinkBtn";
 
 export default function Home() {
   return (
     <>
-      <div>RBNA CONSULT</div>
+      <div className="h-10 bg-slate-900 text-2xl flex items-center pl-5 my-5">
+        RBNA CONSULT
+      </div>
+      <div>
+        <LinkBtn title={"Listar"} path={"/listar"} />
+      </div>
     </>
   );
 }
