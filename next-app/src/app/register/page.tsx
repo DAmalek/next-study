@@ -12,10 +12,10 @@ async function createRegistration(data: FormData) {
   //   "id" | "createdAt" | "updatedAt"
   // >;
   type ResModel = {
-    name: string | undefined | object;
-    email: string | undefined | object;
-    profession: string | undefined | object;
-    salary: number | undefined | object;
+    name: string | undefined | object | null;
+    email: string | undefined | object | null;
+    profession: string | undefined | object | null;
+    salary: number | undefined | object | null;
   };
   const name = data.get("nome")?.valueOf();
   const profession = data.get("profissao")?.valueOf();

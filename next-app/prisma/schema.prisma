@@ -16,7 +16,7 @@ model registration {
   email String @db.VarChar(100)
   profession String @db.VarChar(100)
   salary Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
 
 }
