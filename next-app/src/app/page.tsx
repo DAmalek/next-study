@@ -11,8 +11,9 @@ export default async function Home() {
   return (
     <>
       <Header title="RBNA CONSULT" />
-      <div>
+      <div className="flex gap-2 justify-between">
         <LinkBtn title={"Registro"} path={"/register"} />
+        <LinkBtn title={"Deletar"} path={"/delete"} />
       </div>
       <ul>
         <li className="flex gap-3 justify-between">
@@ -22,7 +23,7 @@ export default async function Home() {
           <div>salario</div>
         </li>
         {registrations.map((registration) => (
-          <li className="flex gap-3 justify-between">
+          <li key={registration.id} className="flex gap-3 justify-between">
             <div>{registration.name}</div>
             <div>{registration.email}</div>
             <div>{registration.profession}</div>

@@ -5,7 +5,7 @@ import { Prisma, registration } from "@prisma/client";
 import { redirect } from "next/navigation";
 import React from "react";
 
-async function createRegistration(data: FormData) {
+async function createRegistration(dat: FormData) {
   "use server";
   // type clientResgistration = Omit<
   //   registration,
@@ -17,10 +17,10 @@ async function createRegistration(data: FormData) {
     profession: string | undefined | object | null;
     salary: number | undefined | object | null;
   };
-  const name = data.get("nome")?.valueOf();
-  const profession = data.get("profissao")?.valueOf();
-  const email = data.get("email")?.valueOf();
-  const salary = Number(data.get("salario")?.valueOf());
+  const name = dat.get("nome")?.valueOf();
+  const profession = dat.get("profissao")?.valueOf();
+  const email = dat.get("email")?.valueOf();
+  const salary = Number(dat.get("salario")?.valueOf());
   const registro: ResModel = {
     name,
     email,
